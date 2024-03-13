@@ -1,9 +1,12 @@
 from aws_cdk import (
     # Duration,
     Stack,
+    aws_s3 as s3,
+    RemovalPolicy,
     # aws_sqs as sqs,
 )
 from constructs import Construct
+
 
 class PortfolioWebsiteStack(Stack):
 
@@ -11,6 +14,10 @@ class PortfolioWebsiteStack(Stack):
         super().__init__(scope, construct_id, **kwargs)
 
         # The code that defines your stack goes here
+        bucket = s3.Bucket(
+            self, "PortfolioWebsiteBucketDev",
+            versioned=True, removal_policy=RemovalPolicy.DESTROY, auto_delete_objects=True, public_read_access=True,
+        )
 
         # example resource
         # queue = sqs.Queue(
