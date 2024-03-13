@@ -16,7 +16,7 @@ class PortfolioWebsiteStack(Stack):
         # The code that defines your stack goes here
         bucket = s3.Bucket(
             self, "PortfolioWebsiteBucketDev",
-            versioned=True, removal_policy=RemovalPolicy.DESTROY, auto_delete_objects=True, public_read_access=True,
+            versioned=True, removal_policy=RemovalPolicy.DESTROY, auto_delete_objects=True,  # public_read_access=True,
         )
 
         # example resource
