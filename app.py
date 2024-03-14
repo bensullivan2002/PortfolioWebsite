@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-import os
 
 import aws_cdk as cdk
 
-from portfolio_website.portfolio_website_stack import PortfolioWebsiteStack
+from portfolio_website.infrastructure.portfolio_website_stack import PortfolioWebsiteStack
 
 app = cdk.App()
 PortfolioWebsiteStack(app, "PortfolioWebsiteStack",

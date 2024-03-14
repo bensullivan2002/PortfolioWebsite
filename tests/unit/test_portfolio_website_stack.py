@@ -1,7 +1,7 @@
 import aws_cdk as core
 import aws_cdk.assertions as assertions
 
-from portfolio_website.portfolio_website_stack import PortfolioWebsiteStack
+from portfolio_website.infrastructure.portfolio_website_stack import PortfolioWebsiteStack
 
 # example tests. To run these tests, uncomment this file along with the example
 # resource in portfolio_website/portfolio_website_stack.py
