@@ -1,5 +1,5 @@
 """AWS CDK stack for my portfolio website."""
-
+import self
 from aws_cdk import (
     Stack,
     aws_s3 as s3,
@@ -34,11 +34,3 @@ class PortfolioWebsiteStack(Stack):
             sources=[s3deploy.Source.asset('./portfolio_website/web-content')],
             destination_bucket=bucket,
         )
-
-        # Provision a DNS record for the website
-        record = route53.RecordSet(self, "AliasRecord",
-                                   record_name="bigben.codes",
-                                   record_type=route53.RecordType.A,
-                                   target=route53.RecordTarget.from_alias(targets.BucketWebsiteTarget(bucket)),
-                                   zone=route53.HostedZone.from_lookup(self, "HostedZone", domain_name="bigben.codes")
-                                   )
