@@ -31,7 +31,7 @@ class PortfolioWebsiteStack(Stack):
         # Deploy the bucket as a static website
         deployment = s3deploy.BucketDeployment(
             self, "DeployWebsite",
-            sources=[s3deploy.Source.asset('./portfolio_website/web-content')],
+            sources=[s3deploy.Source.asset('./portfolio_website/templates')],
             destination_bucket=bucket,
         )
 
