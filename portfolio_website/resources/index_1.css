@@ -366,7 +366,7 @@ dialog {
 }
 
 /*
-Prevent resizing textareas horizontally by default.
+Prevent resizing text areas horizontally by default.
 */
 
 textarea {
@@ -556,7 +556,7 @@ video {
 
 body {
   text-align: center;
-  font-family: "Roboto Mono Medium for Powerline";
+  font-family: "Roboto Mono Medium for Powerline", monospace;
   background-color: black;
   color: ivory;
 }

@@ -4,7 +4,7 @@
 
 body {
     text-align: center;
-    font-family: "Roboto Mono Medium for Powerline";
+    font-family: "Roboto Mono Medium for Powerline", monospace;
     background-color: black;
     color: ivory;
 }
